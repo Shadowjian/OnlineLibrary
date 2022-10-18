@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root {
+    --highlight: rgb(216, 204, 98);
+    /* --highlight: rgba(230, 129, 146, 0.884); */
+    /* --highlight: rgba(235, 186, 194, 0.884); */
+    /* --highlight: rgb(204, 204, 80); */
+    /* --background: #1d5f96;  */
+    --background: #1d5f96; 
+}
+
+/* RESET */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .hero .buttons {
+        width: 50%;
+        align-self: start;
+    }
+
+    .hero .right {
+        font-size: 1.4em;
+    }
+    
+    .hero .right .book-review {
+        line-height: 1.5;
+    }
+  
+ }
+
+body {
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background);
+    line-height: 1.1;
+    font-size: 10px;
+}
+
+
+
+.nav-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color:var(--highlight);
+    box-shadow: 0 -10px 10px #218ae0;
+}
+
+.nav-container {    
+    width: 850px;
+    margin: 0 auto;
+    padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-bar {
+    display: flex;
+    gap: 5px;
+    align-self: center;
+    font-weight: 600;
+    font-size: 1em;
+    color: var(--background);
+}
+
+.info {
+    color: var(--highlight);
+    background-color: var(--background);
+    padding: 5px;
+    border-radius: 5px;
+}
+.details {
+    border: solid 1px var(--background);
+    padding: 5px;
+    border-radius: 5px;
+}
+.complete {
+    border: solid 1px var(--background);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+i {
+    color: var(--highlight)
+}
+
+/* LOGO */
+
+.logo-icon {
+    color: var(--background);
+    font-size: 30px;
+}
+
+.logo-name {
+    font-size: large;
+    font-weight: 600;
+    color: var(--background)
+}
+
+/* SEARCH BAR */
+
+.search-bar {
+    display: flex;
+    gap: 2px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #8fc4e7;
+}
+
+.search-bar *{
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.search-icon i{
+    color: var(--background);
+    font-size: 2em;
+    align-self: center;
+}
+
+
+.cart-count {
+    display: flex;
+    gap: 0.5em;
+}
+
+.cart-icon {
+    color: var(--background);
+    font-size: 20px;
+    align-self: center;
+}
+
+.cart-icon::after {
+    content: "+6";
+    position: relative;
+    font-size: .4em;
+    color: var(--background);
+}
+
+/* APP START LAYOUT */
+.container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+.hero {
+    display: flex;
+    max-width: 850px;
+    align-self: center;
+    justify-content: center;
+}
+
+.library {
+    margin: auto;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: space-evenly;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    min-height: 350px;
+
+}
+/* APP END LAYOUT */
+
+
+/* HERO START */
+.book-cover {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-card {
+    display: flex;
+}
+
+.section {
+    display :flex;
+}
+
+.left {
+    flex: 1;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.right {
+    flex: 2;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(10, 63, 109, 0.9);
+}
+
+.right-item {
+    display: flex;
+}
+
+.description {
+    flex: 6;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.book-title, .rating {
+    color: var(--highlight)  
+}
+
+.rating {
+    padding-right: 5px;
+}
+
+.book-author, .book-review, .review-content {
+    color: rgb(220, 225, 241);
+}
+
+.filler {
+    flex: 1;
+}
+
+/* CTA BUTTONS */
+
+.buttons {
+    flex: 0;
+    gap: 2px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    color: var(--highlight);
+    background-color: #2397f5;
+    box-shadow: -2px 2px 5px #072a4b;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: scale(105%);
+}
+
+.cart {
+    flex-direction: column;
+    justify-self: center;
+    flex: 2;
+    border: solid #1C88E3 1px;
+    background-color: rgba(0, 0, 0, 0);
+
+}
+
+.wish {
+    flex-direction: column;
+    background-color:mistyrose;
+    flex: 2;
+    border: solid #1C88E3 1px;
+    background-color: rgba(0, 0, 0, 0);
+}
+.buy {
+    font-size: 1.7em;
+    flex: 3;
+    /* background-color:lemonchiffon; */
+}
+a {
+    color: var(--highlight);
+
+} 
+/* HERO END */
+
+
+
+/* LIBRARY START */
+.book-card .left {
+    min-height: 300px;
+}
+
+.book-card .rating {
+    align-self: end;
+}
+
+.book-card .buttons {
+    margin-top: 10px;
+    flex: 0;
+}
+
+.library .book-review, .library .review-content {
+    display: none;
+}
+
+/* LIBRARY END */
+
+/* CHECKOUT START */
+
+.payment-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    justify-content: center;
+    gap: 30px;
+    max-width: 600px;
+    margin: 20px auto;
+    border: solid 1px var()
+}
+
+.order-summary {
+    border: solid 2px var(--highlight);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.orders {
+    justify-content: center;
+    gap: 5px;
+}
+
+
+.book-order {
+    flex: 1;
+    max-width: 80px;
+    min-width: 80px;
+}
+
+.orders img {
+    width: 100%;
+    height: 100%;
+}
+
+.form-wrapper {
+    border: solid 2px var(--highlight);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.payment-header {
+    flex: 2;
+}
+.payment-instruction {
+    flex: 5;
+}
+
+.label-style {
+    /* display: block; */
+    padding-left: 10px;
+    font-size: 1.2em;
+    color: var(--highlight);
+}
+
+.input-style {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    border: solid 1px var(--highlight);
+    /* border: solid 1px rgb(237, 239, 243); */
+    padding: 10px;
+    background-color: rgb(171, 189, 240);
+    color: rgb(17, 100, 182);
+}
+
+input, select {
+    border: none;
+    padding: 5px;
+    border-bottom: 1px solid rgb(191, 218, 240);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+input:focus, .region:focus {
+    outline: 1px solid var(--highlight);
+}
+
+.fname, .lname {
+    flex: 1;
+}
+.text-full {
+    width: 100%;
+}
+
+input[type="radio"]{
+    outline: none;
+    cursor: pointer;
+}
+.region {
+    color: rgb(17, 100, 182);
+}
+.region option {
+    background-color: rgb(171, 189, 240);;
+}
+
+.city {
+    flex: 4;
+} 
+.postal, .region {
+    flex: 1;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.method {
+    display: flex;
+    gap: 5px;
+}
+
+.cost {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cost-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cost-right {
+    text-align: right;
+}
+
+.btn-pay {
+    width: 60%;
+    padding: 10px 0;
+    margin: auto;
+}
+/* CHECOUT END */
+
+/* @ MEDIA VIEWS */
+@media (max-width: 760px) {
+  
+    .hero {
+        position: fixed;
+        top: 0;
+        margin-top: 40px;
+        z-index: 100;
+    }
+    .library {
+        margin-top: 380px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .sm-0 {
+        display:none;
+    }
+   
+    .col {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .library {
+        margin-top: 320px;
+    }
+}
+
+@media (max-width: 550px) {
+    body {
+        font-size: 10px;
+    }
+    .library {
+        margin-top: 260px;
+    }
+}
+
+@media (max-width: 370px) {
+    body {
+        font-size: 7px;
+    }
+
+    .hero {
+        display: none;
+    }
+    .library {
+        margin-top: 0;
+    }
+
+    .wish a, .cart a {
+        display: none;
+    }
+}
+
+

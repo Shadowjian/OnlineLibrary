@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d6e7243d5a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="nav-wrapper">
+    <nav>
+        <div class="nav-container">
+            <a href="/index.html" class="logo">
+                <i class="fa-solid fa-glasses logo-icon"></i> </a>
+                <div class="progress-bar">
+                    <span class="info"><i class="fa-regular fa-circle-check" id='info'></i> Information</span>
+                    <span class="details">2. Payment Details</span>
+                    <span class="complete">3. Complete Order</span>
+                </div>
+            <div class="cart-count">
+                <i class="fa-solid fa-cart-shopping cart-icon"></i>
+            </div>
+        </div>
+    </nav>
+</div>
+                
+
+<div class="payment-container">
+    
+    <div class="order-summary">
+        
+        <div class="input-style">
+            <h3 class="payment-header">Order Summary</h3>
+            <p class="payment-instruction">Please review your order. If you need to add more books just click on the "Add More Books" button below.</p>
+        </div>
+        
+        <div class="orders input-style">
+            <div class="book-order"><img src="/images/image2.jpg" alt=""></div>
+            <div class="book-order"><img src="/images/image3.jpg" alt=""></div>
+            <div class="book-order"><img src="/images/orderofthephoenix.png" alt=""></div>
+            <div class="book-order"><img src="/images/image2.jpg" alt=""></div>
+            <div class="book-order"><img src="/images/image1.jpg" alt=""></div>
+            <div class="book-order"><img src="/images/orderofthephoenix.png" alt=""></div>
+        </div>
+        <div class="input-style">
+            <a class="btn-pay btn" href="/index.html">Add More Books</a>
+        </div>
+    </div>
+
+    <form class="form-wrapper" action="">
+        <div class="input-style">
+            <h3 class="payment-header">Payment Details</h3>
+            <p class="payment-instruction">Fill out the payment details below to complete your purchase.</p>
+        </div>
+        <label class="label-style">Name</label>
+        <div class="input-style">
+            <input class="fname" type="text" placeholder="First name">
+            <input class="lname" type="text" placeholder="Last name">
+        </div>
+        
+        <label class="label-style">Email Address</label>
+        <div class="input-style">
+            <input class="email text-full" type="email" placeholder="@email.com">
+        </div>
+        
+        <label class="label-style">Delivery Address</label>
+        <div class="input-style">
+            <input class="street text-full" type="text" placeholder="Street">
+            <input class="city" type="text" placeholder="City/Province">
+            <input class="postal" type="text" placeholder="Postal #">
+            <select class="region" name="region">
+                <div class="option-wrapper">
+                    <option value="">Region</option>
+                    <option value="1">Region I</option>
+                    <option value="2">Region II</option>
+                    <option value="3">Region III</option>
+                    <option value="4">Region IV</option>
+                    <option value="5">Region V</option>
+                </div>
+            </select>
+        </div>
+
+        <label class="label-style">Select Payment Method:</label>
+        <div class="input-style payment-methods">
+            <div class="method">
+                <input id="visa" type="radio" name="payment-options">
+                <label for="visa">Visa</label>
+            </div>
+            <div class="method">
+                <input id="mc" type="radio" name="payment-options">
+                <label for="mc">Master Card</label>
+            </div>
+            <div class="method">
+                <input id="gcash" type="radio" name="payment-options">
+                <label for="gcash">GCASH</label>
+            </div>
+            <div class="method">
+                <input id="cod" type="radio" name="payment-options">
+                <label for="cod">COD</label>
+            </div>
+        </div>
+
+        <div class="cost input-style">
+            <div class="cost-column">
+                <span>Subtotal</span>
+                <span>Vat %</span>
+                <span>Total</span>
+            </div>
+            <div class="cost-column cost-right">
+                <span>$80</span>
+                <span>$4</span>
+                <span>$84</span>
+            </div>
+        </div>
+        <div class="input-style">
+            <input id="pay" onclick="showAlert()" class="btn-pay btn" type="submit" value="Pay $84">                
+        </div>
+    </form>
+
+</div>
+    <script src="/main.js"></script>
+</body>
+</html>

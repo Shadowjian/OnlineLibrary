@@ -1,0 +1,11 @@
+
+img {
+    width: 100%;
+}
+
+.image-library {
+    display: flex;
+    /* justify-content: center; */
+    border: solid 1px green;
+    background-color: green;
+}
